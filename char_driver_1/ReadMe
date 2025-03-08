@@ -1,0 +1,7 @@
+Implemented a circular buffer with char device drvier
+max buffer size of 20 bytes , overwrites the data when overflows the buffer
+1. All the data provided by user (max 20 bytes) should be written to the buffer and anything over 20
+bytes should be dropped
+2. Internally, driver should maintain a write pointer which points to the location where new data can
+be written. Newer data would overwrite the old data, if not read.
+3. Driver should maintain a read pointer which points to data to be read next.
