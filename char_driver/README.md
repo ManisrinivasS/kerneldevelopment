@@ -5,9 +5,10 @@ final_char_driver
         
    o.Implement the open, close, read and write operations on device driver
 
-                ![Screenshot from 2025-03-25 20-06-03](https://github.com/user-attachments/assets/6299c2a4-1249-4a80-82be-77a732ec2629)
+        ![Screenshot from 2025-03-25 20-06-03](https://github.com/user-attachments/assets/6299c2a4-1249-4a80-82be-77a732ec2629)
 
   **2. Code Explanation**
+  
          -> ret = **alloc_chrdev_region**(&dev, FIRST_MINOR, MINOR_CNT, "final_driver")) 
 	       // alloc_chrdev_region - to register and dynamically allocate devices range of numbers - 
 	       // Devices will be identified by number not with symbolic name
@@ -18,7 +19,7 @@ final_char_driver
 		              **unsinged count:** required number of minor devices
 		              **const char *name:** name of driver 
 		
-         **create device files:**
+          **create device files:**
 	 -> cdev_init(&c_dev[i], &driver_fops);
                 //Initalize the character device , and initialize file operations structure driver_fops	  
 		
