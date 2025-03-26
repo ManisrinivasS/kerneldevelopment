@@ -33,7 +33,36 @@ final_char_driver
 	 -> dev_ret=device_create(cl,NULL,MKDEV(MAJOR(dev), i),NULL,"finalchar%d",i);
            // create dev file in /dev/mychar*, now user applicatins can  interact with kernel driver via a device file operations
 
+**3. Char device driver cleanup functions**
 
+	-> unregister_chrdev_region(dev, MINOR_CNT) - unregister range of device numbers 
+        -> class_destroy(cl) - destroy class structure
+	-> cdev_del(&c_dev[i]) - remove cdev registration from kernel VFS
+        -> device_destroy(cl, MKDEV(MAJOR(dev),0)) - remove a device 
+
+
+ **4. copy to user and copy to kernel functions**
+
+ 	  -> copy_to_user - copies data from kernel to user
+          -> copy_from_user - copies data from user to kernel
+
+
+  **5. Testing and output**
+
+  	   -> compile the code using **Make** - which will generate .ko file
+           -> load the module - insmod *.ko
+	   -> write to driver using echo - echo "hi driver" > /dev/finalchar0
+           -> read driver data using cat - cat /dev/finalchar0
+
+
+
+
+
+
+
+
+
+ 
 
 
 
