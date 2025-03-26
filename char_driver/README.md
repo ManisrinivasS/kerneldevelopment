@@ -5,7 +5,10 @@ final_char_driver
         
    o.Implement the open, close, read and write operations on device driver
 
-        ![Screenshot from 2025-03-25 20-06-03](https://github.com/user-attachments/assets/6299c2a4-1249-4a80-82be-77a732ec2629)
+   ![Screenshot from 2025-03-26 22-01-15](https://github.com/user-attachments/assets/e8f07199-164b-4d9e-89ae-967895d96955)
+
+
+        
 
   **2. Code Explanation**
   
@@ -36,23 +39,23 @@ final_char_driver
 **3. Char device driver cleanup functions**
 
 	-> unregister_chrdev_region(dev, MINOR_CNT) - unregister range of device numbers 
-        -> class_destroy(cl) - destroy class structure
+	-> class_destroy(cl) - destroy class structure
 	-> cdev_del(&c_dev[i]) - remove cdev registration from kernel VFS
-        -> device_destroy(cl, MKDEV(MAJOR(dev),0)) - remove a device 
+	-> device_destroy(cl, MKDEV(MAJOR(dev),0)) - remove a device 
 
 
  **4. copy to user and copy to kernel functions**
 
- 	  -> copy_to_user - copies data from kernel to user
-          -> copy_from_user - copies data from user to kernel
+   -> copy_to_user - copies data from kernel to user
+   -> copy_from_user - copies data from user to kernel
 
 
   **5. Testing and output**
 
-  	   -> compile the code using **Make** - which will generate .ko file
-           -> load the module - insmod *.ko
-	   -> write to driver using echo - echo "hi driver" > /dev/finalchar0
-           -> read driver data using cat - cat /dev/finalchar0
+  	 -> compile the code using **Make** - which will generate .ko file
+         -> load the module - insmod *.ko
+	 -> write to driver using echo - echo "hi driver" > /dev/finalchar0
+         -> read driver data using cat - cat /dev/finalchar0
 
 
 
