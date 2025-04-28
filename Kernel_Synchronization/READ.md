@@ -19,6 +19,7 @@ usage : mutex_lock(), mutex_unlock()
           struct mutex my_mutex
           mutex_lock(&my_mutex);
           mutex_unlock(&my_mutex); 
+Imagine 3 processes (P1, P2, P3) want to access a critical section protected by a mutex.
           
 ![Screenshot from 2025-04-28 08-12-57](https://github.com/user-attachments/assets/7dc44fb7-5aea-4b68-87c4-3a59d6a2be30)
 
