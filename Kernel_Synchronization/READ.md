@@ -20,7 +20,7 @@ usage : mutex_lock(), mutex_unlock()
           mutex_lock(&my_mutex);
           mutex_unlock(&my_mutex); 
           
-    ![Screenshot from 2025-04-28 08-12-57](https://github.com/user-attachments/assets/7dc44fb7-5aea-4b68-87c4-3a59d6a2be30)
+![Screenshot from 2025-04-28 08-12-57](https://github.com/user-attachments/assets/7dc44fb7-5aea-4b68-87c4-3a59d6a2be30)
 
 
 
