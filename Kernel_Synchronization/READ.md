@@ -19,8 +19,10 @@ usage : mutex_lock(), mutex_unlock()
           struct mutex my_mutex
           mutex_lock(&my_mutex);
           mutex_unlock(&my_mutex); 
-    
-![Screenshot from 2025-04-28 08-09-56](https://github.com/user-attachments/assets/9ab5052d-5bfc-4df7-aaea-cb962d29c39e)
+          
+    ![Screenshot from 2025-04-28 08-12-57](https://github.com/user-attachments/assets/7dc44fb7-5aea-4b68-87c4-3a59d6a2be30)
+
+
 
 
 Meanwhile:
@@ -30,15 +32,5 @@ P2 and P3 are BLOCKED at mutex_lock() and WAITING
 It has two types counting sema and binary sema. 
 CS can be acquired by 'n' num of threads 
 usage: down(), up()
-Semaphore count: 2
-****
-P1 --> down() -> count = 1  --> Critical Section
+![Screenshot from 2025-04-28 08-09-56](https://github.com/user-attachments/assets/9ab5052d-5bfc-4df7-aaea-cb962d29c39e)
 
-P2 --> down() -> count = 0  --> Critical Section
-
-P3 --> down() -> BLOCKED (count = 0)
-
-[When P1 calls up()]
-
-count = 1 --> P3 wakes up and enters
-****
