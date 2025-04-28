@@ -21,14 +21,8 @@ usage : mutex_lock(), mutex_unlock()
           mutex_unlock(&my_mutex); 
     
 **** 
-         +-------------+             +----------------+
-P1 ---> | mutex_lock() | --(success)->| Critical Section |
-        +-------------+             +----------------+
-                                       |
-                                       v
-                              +-----------------+
-                              | mutex_unlock()   |
-                              +-----------------+
+        ![Screenshot from 2025-04-28 08-09-56](https://github.com/user-attachments/assets/ac42db45-7f99-43a3-9a89-e3f61c2434c3)
+
 ****
 
 Meanwhile:
@@ -39,7 +33,7 @@ It has two types counting sema and binary sema.
 CS can be acquired by 'n' num of threads 
 usage: down(), up()
 Semaphore count: 2
-
+****
 P1 --> down() -> count = 1  --> Critical Section
 
 P2 --> down() -> count = 0  --> Critical Section
@@ -49,4 +43,4 @@ P3 --> down() -> BLOCKED (count = 0)
 [When P1 calls up()]
 
 count = 1 --> P3 wakes up and enters
-
+****
