@@ -19,8 +19,8 @@ usage : mutex_lock(), mutex_unlock()
           struct mutex my_mutex
           mutex_lock(&my_mutex);
           mutex_unlock(&my_mutex); 
-
- 
+    
+**** 
          +-------------+             +----------------+
 P1 ---> | mutex_lock() | --(success)->| Critical Section |
         +-------------+             +----------------+
@@ -29,6 +29,7 @@ P1 ---> | mutex_lock() | --(success)->| Critical Section |
                               +-----------------+
                               | mutex_unlock()   |
                               +-----------------+
+****
 
 Meanwhile:
 P2 and P3 are BLOCKED at mutex_lock() and WAITING
