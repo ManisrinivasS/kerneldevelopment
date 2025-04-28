@@ -21,6 +21,7 @@ usage : mutex_lock(), mutex_unlock()
           mutex_unlock(&my_mutex); 
     
 **** 
+
         ![Screenshot from 2025-04-28 08-09-56](https://github.com/user-attachments/assets/ac42db45-7f99-43a3-9a89-e3f61c2434c3)
 
 ****
