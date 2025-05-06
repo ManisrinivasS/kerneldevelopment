@@ -1,4 +1,4 @@
-Problem Statement:
+Problem Statement:**(counting semaphore and mutex)**
 
     You are asked to implement a producer-consumer system where:
     
