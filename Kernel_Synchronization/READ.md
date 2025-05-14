@@ -14,7 +14,7 @@ Imagine two kernel threads accessing shared variable
 Common kernel sycn mechanisms:
 
 **MUTEX** - mutual exclusion locks
-it is also called locking mechainsm, when mutex acquires the lock no other thread can access the CS until it unlocks.
+It is also called locking mechainsm, when mutex acquires the lock no other thread can access the CS until it unlocks.
 usage : mutex_lock(), mutex_unlock()
           struct mutex my_mutex
           mutex_lock(&my_mutex);
